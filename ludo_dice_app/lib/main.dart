@@ -7,7 +7,7 @@ void main() {
     MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.blueAccent,
+        backgroundColor: Colors.tealAccent,
         //  appBar: AppBar(
         //   title: Text("Dice Rolling Ludo"),
         // backgroundColor: Colors.teal,
@@ -41,8 +41,8 @@ class _DicePageState extends State<DicePage> {
   Widget build(BuildContext context) {
     return Center(
       child: SizedBox(
-        height: 700,
-        width: 700,
+        height: 500,
+        width: 500,
         child: Column(
           children: [
             Padding(
