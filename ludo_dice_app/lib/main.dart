@@ -41,8 +41,8 @@ class _DicePageState extends State<DicePage> {
   Widget build(BuildContext context) {
     return Center(
       child: SizedBox(
-        height: 500,
-        width: 500,
+        height: 700,
+        width: 700,
         child: Column(
           children: [
             Padding(
