@@ -1,6 +1,6 @@
 {
-    "name": "xylophone_notes_app",
-    "short_name": "xylophone_notes_app",
+    "name": "xylophone",
+    "short_name": "xylophone",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
