@@ -4,6 +4,11 @@ import 'package:audioplayers/audioplayers.dart';
 void main() => runApp(XylophoneApp());
 
 class XylophoneApp extends StatelessWidget {
+  void playsound(int number) {
+    final player = new AudioCache();
+    player.play('not$number.wav');
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,8 +24,7 @@ class XylophoneApp extends StatelessWidget {
                 ),
                 color: Colors.blueAccent,
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('not.wav');
+                  playsound(1);
                 },
               ),
               FlatButton(
@@ -30,8 +34,7 @@ class XylophoneApp extends StatelessWidget {
                 ),
                 color: Colors.greenAccent,
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('not1.wav');
+                  playsound(2);
                 },
               ),
               FlatButton(
@@ -41,8 +44,7 @@ class XylophoneApp extends StatelessWidget {
                 ),
                 color: Colors.redAccent,
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('not2.wav');
+                  playsound(3);
                 },
               ),
               FlatButton(
@@ -52,8 +54,7 @@ class XylophoneApp extends StatelessWidget {
                 ),
                 color: Colors.yellowAccent,
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('not3.wav');
+                  playsound(4);
                 },
               ),
               FlatButton(
@@ -63,8 +64,7 @@ class XylophoneApp extends StatelessWidget {
                 ),
                 color: Colors.blueAccent,
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('not5.wav');
+                  playsound(5);
                 },
               ),
               FlatButton(
@@ -74,8 +74,7 @@ class XylophoneApp extends StatelessWidget {
                 ),
                 color: Colors.purpleAccent,
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('not6.wav');
+                  playsound(6);
                 },
               ),
               FlatButton(
@@ -85,8 +84,7 @@ class XylophoneApp extends StatelessWidget {
                 ),
                 color: Colors.tealAccent,
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('not7.wav');
+                  playsound(7);
                 },
               ),
             ],
