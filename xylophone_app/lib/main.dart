@@ -9,19 +9,87 @@ class XylophoneApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: SafeArea(
-          child: Center(
-            //For some reason TextButton not working here but flatbutton works perfect.
-            child: new FlatButton(
-              child: Text(
-                'Play tone',
-                style: TextStyle(fontSize: 30, color: Colors.black),
+          child: Column(
+            children: [
+              //For some reason TextButton not working here but flatbutton works perfect.
+              FlatButton(
+                child: Text(
+                  'Play tone',
+                  style: TextStyle(fontSize: 30, color: Colors.black),
+                ),
+                color: Colors.blueAccent,
+                onPressed: () {
+                  final player = AudioCache();
+                  player.play('not.wav');
+                },
               ),
-              color: Colors.blueAccent,
-              onPressed: () {
-                final player = AudioCache();
-                player.play('mann.mp3');
-              },
-            ),
+              FlatButton(
+                child: Text(
+                  'Play tone',
+                  style: TextStyle(fontSize: 30, color: Colors.black),
+                ),
+                color: Colors.greenAccent,
+                onPressed: () {
+                  final player = AudioCache();
+                  player.play('not1.wav');
+                },
+              ),
+              FlatButton(
+                child: Text(
+                  'Play tone',
+                  style: TextStyle(fontSize: 30, color: Colors.black),
+                ),
+                color: Colors.redAccent,
+                onPressed: () {
+                  final player = AudioCache();
+                  player.play('not2.wav');
+                },
+              ),
+              FlatButton(
+                child: Text(
+                  'Play tone',
+                  style: TextStyle(fontSize: 30, color: Colors.black),
+                ),
+                color: Colors.yellowAccent,
+                onPressed: () {
+                  final player = AudioCache();
+                  player.play('not3.wav');
+                },
+              ),
+              FlatButton(
+                child: Text(
+                  'Play tone',
+                  style: TextStyle(fontSize: 30, color: Colors.black),
+                ),
+                color: Colors.blueAccent,
+                onPressed: () {
+                  final player = AudioCache();
+                  player.play('not5.wav');
+                },
+              ),
+              FlatButton(
+                child: Text(
+                  'Play tone',
+                  style: TextStyle(fontSize: 30, color: Colors.black),
+                ),
+                color: Colors.purpleAccent,
+                onPressed: () {
+                  final player = AudioCache();
+                  player.play('not6.wav');
+                },
+              ),
+              FlatButton(
+                child: Text(
+                  'Play tone',
+                  style: TextStyle(fontSize: 30, color: Colors.black),
+                ),
+                color: Colors.tealAccent,
+                onPressed: () {
+                  final player = AudioCache();
+                  player.play('not7.wav');
+                },
+              ),
+            ],
           ),
         ),
       ),
