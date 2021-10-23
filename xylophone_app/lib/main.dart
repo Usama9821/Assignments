@@ -10,6 +10,7 @@ class XylophoneApp extends StatelessWidget {
       home: Scaffold(
         body: SafeArea(
           child: Center(
+            //For some reason TextButton not working here but flatbutton works perfect.
             child: new FlatButton(
               child: Text(
                 'Play tone',
@@ -20,17 +21,6 @@ class XylophoneApp extends StatelessWidget {
                 final player = AudioCache();
                 player.play('mann.mp3');
               },
-              // child: new TextButton(
-              //   child: Text(
-              //     'Play tone',
-              //     style: TextStyle(fontSize: 30, color: Colors.black),
-              //   ),
-              //   style: ButtonStyle(
-              //       backgroundColor: MaterialStateProperty.all(Colors.blue)),
-              //   onPressed: () {
-              //     final player = AudioCache();
-              //     player.play('note1.wav');
-              //   },
             ),
           ),
         ),
