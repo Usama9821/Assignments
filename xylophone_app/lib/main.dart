@@ -4,9 +4,9 @@ import 'package:audioplayers/audioplayers.dart';
 void main() => runApp(XylophoneApp());
 
 class XylophoneApp extends StatelessWidget {
-  void playsound(int number) {
+  void playnote(int num) {
     final player = new AudioCache();
-    player.play('not$number.wav');
+    player.play('not$num.wav');
   }
 
   @override
@@ -24,7 +24,7 @@ class XylophoneApp extends StatelessWidget {
                 ),
                 color: Colors.blueAccent,
                 onPressed: () {
-                  playsound(1);
+                  playnote(1);
                 },
               ),
               FlatButton(
@@ -34,7 +34,7 @@ class XylophoneApp extends StatelessWidget {
                 ),
                 color: Colors.greenAccent,
                 onPressed: () {
-                  playsound(2);
+                  playnote(2);
                 },
               ),
               FlatButton(
@@ -44,7 +44,7 @@ class XylophoneApp extends StatelessWidget {
                 ),
                 color: Colors.redAccent,
                 onPressed: () {
-                  playsound(3);
+                  playnote(3);
                 },
               ),
               FlatButton(
@@ -54,7 +54,7 @@ class XylophoneApp extends StatelessWidget {
                 ),
                 color: Colors.yellowAccent,
                 onPressed: () {
-                  playsound(4);
+                  playnote(4);
                 },
               ),
               FlatButton(
@@ -64,7 +64,7 @@ class XylophoneApp extends StatelessWidget {
                 ),
                 color: Colors.blueAccent,
                 onPressed: () {
-                  playsound(5);
+                  playnote(5);
                 },
               ),
               FlatButton(
@@ -74,7 +74,7 @@ class XylophoneApp extends StatelessWidget {
                 ),
                 color: Colors.purpleAccent,
                 onPressed: () {
-                  playsound(6);
+                  playnote(6);
                 },
               ),
               FlatButton(
@@ -84,7 +84,7 @@ class XylophoneApp extends StatelessWidget {
                 ),
                 color: Colors.tealAccent,
                 onPressed: () {
-                  playsound(7);
+                  playnote(7);
                 },
               ),
             ],
