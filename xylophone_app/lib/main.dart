@@ -29,7 +29,7 @@ class XylophoneApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.tealAccent,
+          backgroundColor: Colors.black87,
           title: new Text(
             "Xylophone",
           ),
