@@ -20,6 +20,78 @@ class _homepageState extends State<homepage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            Expanded(
+              child: new ElevatedButton(
+                style: ButtonStyle(
+                  overlayColor: getColor(
+                    Colors.red,
+                    Colors.greenAccent,
+                  ),
+                ),
+                onPressed: () {},
+                child: Text(''),
+              ),
+            ),
+            Expanded(
+              child: new ElevatedButton(
+                style: ButtonStyle(
+                  overlayColor: getColor(
+                    Colors.green,
+                    Colors.blue,
+                  ),
+                ),
+                onPressed: () {},
+                child: Text(''),
+              ),
+            ),
+            Expanded(
+              child: new ElevatedButton(
+                style: ButtonStyle(
+                  overlayColor: getColor(
+                    Colors.black54,
+                    Colors.yellow,
+                  ),
+                ),
+                onPressed: () {},
+                child: Text(''),
+              ),
+            ),
+            Expanded(
+              child: new ElevatedButton(
+                style: ButtonStyle(
+                  overlayColor: getColor(
+                    Colors.pink,
+                    Colors.teal,
+                  ),
+                ),
+                onPressed: () {},
+                child: Text(''),
+              ),
+            ),
+            Expanded(
+              child: new ElevatedButton(
+                style: ButtonStyle(
+                  overlayColor: getColor(
+                    Colors.lightBlue,
+                    Colors.redAccent,
+                  ),
+                ),
+                onPressed: () {},
+                child: Text(''),
+              ),
+            ),
+            Expanded(
+              child: new ElevatedButton(
+                style: ButtonStyle(
+                  overlayColor: getColor(
+                    Colors.red,
+                    Colors.greenAccent,
+                  ),
+                ),
+                onPressed: () {},
+                child: Text(''),
+              ),
+            ),
             Center(
               child: new FlatButton(
                 child: Text(
@@ -44,4 +116,15 @@ class _homepageState extends State<homepage> {
       ),
     );
   }
+}
+
+MaterialStateProperty<Color> getColor(Color color, Color colorPressed) {
+  final getColor = (Set<MaterialState> states) {
+    if (states.contains(MaterialState.pressed)) {
+      return colorPressed;
+    } else {
+      return color;
+    }
+  };
+  return MaterialStateProperty.resolveWith(getColor);
 }
