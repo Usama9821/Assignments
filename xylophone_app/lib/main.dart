@@ -1,58 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'package:xylophone_app/homepage.dart';
+import 'xylo.dart';
+import 'homepage.dart';
 
 void main() => runApp(XylophoneApp());
 
 class XylophoneApp extends StatelessWidget {
-  void playnote(int num) {
-    final player = new AudioCache();
-    //player.load('not$num.wav');
-    player.play('not$num.wav');
-  }
-
-  Expanded playbutton(Color color, int number) {
-    return Expanded(
-      child: new FlatButton(
-        child: Text(
-          '',
-          style: TextStyle(fontSize: 0, color: Colors.black),
-        ),
-        color: color,
-        onPressed: () {
-          playnote(number);
-        },
-      ),
-    );
-  }
+  const XylophoneApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.black87,
-          title: new Text(
-            "Xylophone",
-          ),
-          elevation: 4.0,
-          centerTitle: true,
-        ),
-        body: SafeArea(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              //For some reason TextButton not working here but flatbutton works perfect.
-              playbutton(Colors.red, 1),
-              playbutton(Colors.greenAccent, 2),
-              playbutton(Colors.blue, 3),
-              playbutton(Colors.grey, 4),
-              playbutton(Colors.yellow, 5),
-              playbutton(Colors.pinkAccent, 6),
-              playbutton(Colors.deepPurple, 7),
-            ],
-          ),
-        ),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.dark().copyWith(
+        primaryColor: Color(0xFF0A0E21),
+        scaffoldBackgroundColor: Color(0xFF0A0E21),
       ),
+      home: homepage(),
     );
   }
 }
