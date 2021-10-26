@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'homepage.dart';
 
 class xylo extends StatelessWidget {
   void playnote(int num) {
@@ -23,6 +24,8 @@ class xylo extends StatelessWidget {
     );
   }
 
+  final String c1;
+  xylo({required this.c1});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -40,6 +43,14 @@ class xylo extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              FlatButton(
+                child: Text(
+                  c1,
+                  style: TextStyle(fontSize: 0, color: Colors.black),
+                ),
+                color: Colors.black54,
+                onPressed: () {},
+              ),
               //For some reason TextButton not working here but flatbutton works perfect.
               playbutton(Colors.red, 1),
               playbutton(Colors.greenAccent, 2),

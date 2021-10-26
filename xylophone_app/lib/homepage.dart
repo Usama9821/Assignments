@@ -10,6 +10,7 @@ class homepage extends StatefulWidget {
 }
 
 class _homepageState extends State<homepage> {
+  String c1 = 'red';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,6 +21,13 @@ class _homepageState extends State<homepage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            TextField(
+              autofocus: false,
+              keyboardType: TextInputType.name,
+              onChanged: (text) {
+                c1 = text;
+              },
+            ),
             Expanded(
               child: new ElevatedButton(
                 style: ButtonStyle(
@@ -93,18 +101,24 @@ class _homepageState extends State<homepage> {
               ),
             ),
             Center(
-              child: new FlatButton(
+              child: FlatButton(
                 child: Text(
                   'Start',
                   style: TextStyle(fontSize: 0, color: Colors.black),
                 ),
                 color: Colors.limeAccent,
                 onPressed: () {
+                  // Navigator.of(context).push(
+                  //   MaterialPageRoute(
+                  //     builder: (context) => xylo(c1: c1),
+                  //   ),
+                  // );
+
                   Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (BuildContext) {
-                        return xylo();
+                        return xylo(c1: c1);
                       },
                     ),
                   );
