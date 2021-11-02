@@ -32,13 +32,13 @@ class _QuizPageState extends State<QuizPage> {
   List<Icon> scoreKeeper = [];
 
   void checkAnswer(bool userPickedAnswer) {
-    bool correctAnswer = quizBrain.getCorrectAnswer();
+    bool? correctAnswer = quizBrain.getCorrectAnswer();
 
     setState(() {
       if (quizBrain.isFinished() == true) {
         Alert(
           context: context,
-          title: 'Finished!',
+          title: 'Completed!',
           desc: 'You\'ve reached the end of the quiz.',
         ).show();
 
@@ -74,7 +74,7 @@ class _QuizPageState extends State<QuizPage> {
             padding: EdgeInsets.all(10.0),
             child: Center(
               child: Text(
-                quizBrain.getQuestionText(),
+                quizBrain.getQuestionText()!,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 25.0,
