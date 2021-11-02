@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 import 'package:quizapp/quiz_brain.dart';
-import 'home_drawer.dart';
 
 QuizBrain quizBrain = QuizBrain();
 
@@ -16,8 +15,7 @@ class quizapp extends StatelessWidget {
         backgroundColor: Colors.deepPurple,
         drawer: Drawer(
           child: Container(
-            color: Colors.green[700],
-            width: double.infinity,
+            color: Colors.deepPurple,
             height: 200,
             padding: EdgeInsets.only(top: 20.0),
             child: Column(
@@ -25,11 +23,11 @@ class quizapp extends StatelessWidget {
               children: [
                 Container(
                   margin: EdgeInsets.only(bottom: 10),
-                  height: 70,
+                  height: 50,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     image: DecorationImage(
-                      image: AssetImage('assets/images/profile.jpg'),
+                      image: AssetImage('assets/mine.jpg'),
                     ),
                   ),
                 ),
