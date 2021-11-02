@@ -5,15 +5,13 @@ class QuizBrain {
 
   List<Question> _questionBank = [
     Question('Digital camera is input device used to take photographs', true),
+    Question('FAX stands for First Away Xerox', false),
     Question(
-        'No piece of square dry paper can be folded in half more than 7 times.',
-        false),
-    Question(
-        'In London, UK, if you happen to die in the House of Parliament, you are technically entitled to a state funeral, because the building is considered too sacred a place.',
+        'Whaling / Whaling attack is a kind of phishing attacks that target senior executives and other high profile to access valuable information.',
         true),
     Question(
-        'The loudest sound produced by any animal is 188 decibels. That animal is the African Elephant.',
-        false),
+        'Freeware is software that is available for use at no monetary cost.',
+        true),
     Question(
         'The total surface area of two human lungs is approximately 70 square metres.',
         true),
