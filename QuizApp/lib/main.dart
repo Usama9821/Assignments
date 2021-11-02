@@ -22,8 +22,8 @@ class quizapp extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  margin: EdgeInsets.only(bottom: 10),
-                  height: 50,
+                  margin: EdgeInsets.only(bottom: 15),
+                  height: 90,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     image: DecorationImage(
@@ -47,6 +47,7 @@ class quizapp extends StatelessWidget {
           ),
         ),
         appBar: AppBar(
+          backgroundColor: Colors.teal,
           title: Text('Quiz Ingest'),
         ),
         body: SafeArea(
