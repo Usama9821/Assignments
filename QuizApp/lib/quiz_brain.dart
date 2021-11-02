@@ -4,7 +4,7 @@ class QuizBrain {
   int _questionNumber = 0;
 
   List<Question> _questionBank = [
-    Question('Some cats are actually allergic to humans', true),
+    Question('Digital camera is input device used to take photographs', true),
     Question(
         'No piece of square dry paper can be folded in half more than 7 times.',
         false),
