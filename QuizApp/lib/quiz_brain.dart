@@ -1,4 +1,5 @@
 import 'question.dart';
+import 'main.dart';
 
 class QuizBrain {
   int _questionNumber = 0;
