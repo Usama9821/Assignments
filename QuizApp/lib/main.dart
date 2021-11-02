@@ -74,6 +74,7 @@ class _QuizPageState extends State<QuizPage> {
             padding: EdgeInsets.all(10.0),
             child: Center(
               child: Text(
+                //added ! to handle the null safety in text as by default Text can accept string not string?
                 quizBrain.getQuestionText()!,
                 textAlign: TextAlign.center,
                 style: TextStyle(

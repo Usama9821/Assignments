@@ -1,5 +1,4 @@
 import 'question.dart';
-import 'main.dart';
 
 class QuizBrain {
   int _questionNumber = 0;
@@ -31,17 +30,20 @@ class QuizBrain {
     }
   }
 
+//added ? after string to handle null safety
   String? getQuestionText() {
     return _questionBank[_questionNumber].questionText;
   }
 
+//added ? after bool to handle null safety
   bool? getCorrectAnswer() {
     return _questionBank[_questionNumber].questionAnswer;
   }
 
+//added ? after bool to handle null safety
   bool? isFinished() {
     if (_questionNumber >= _questionBank.length - 1) {
-      print('Returning back true');
+      print('Returning true');
       return true;
     } else {
       return false;
