@@ -1,9 +1,12 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class Page1Screen extends StatelessWidget {
   static const String routeName = "/page1";
   var _controller1 = TextEditingController();
   var _controller2 = TextEditingController();
+  int max = Random().nextInt(9) + 1;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +33,7 @@ class Page1Screen extends StatelessWidget {
                   labelText: ''),
               maxLength: 1,
             ),
-            Text("+"),
+            Center(child: Text("+")),
             TextFormField(
               controller: _controller2,
               decoration: const InputDecoration(
@@ -42,6 +45,12 @@ class Page1Screen extends StatelessWidget {
                   labelText: ''),
               maxLength: 1,
               keyboardType: TextInputType.number,
+            ),
+            Text("$max"),
+            Divider(
+              //color: Colors.black,
+              height: 15,
+              thickness: 2,
             ),
           ],
         ),
