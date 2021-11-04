@@ -63,14 +63,15 @@ class Page1Screen extends StatelessWidget {
                           var value2 = _controller2.text;
                           var sum = value1 + value2;
                           if (sum == max) {
-                            Navigator.push
                             Navigator.push(
-                                context,
-                                MaterialPageRoute(
+                              context,
+                              MaterialPageRoute(
                                 builder: (BuildContext) {
-                              return results(sum: sum);
-                            },
-                          ),
+                                  return results(sum: sum);
+                                },
+                              ),
+                            );
+                            //Navigator.push(context, MaterialPageRoute(builder: BuildContext){return results(sum, sum)},)
                           } else {}
                         },
                       ),
