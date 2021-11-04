@@ -15,7 +15,6 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
-  slide_drawer: ^1.0.3
   flutter:
     sdk: flutter
 
