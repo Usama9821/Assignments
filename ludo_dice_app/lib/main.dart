@@ -8,9 +8,6 @@ void main() {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.tealAccent,
-        //  appBar: AppBar(
-        //   title: Text("Dice Rolling Ludo"),
-        // backgroundColor: Colors.teal,
         // ),
         body: DicePage(),
       ),
