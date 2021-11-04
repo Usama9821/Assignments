@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mathapp/Screens/page1.dart';
-import 'Screens/account.dart';
 import 'Screens/home.dart';
-import 'Screens/settings.dart';
 import 'Screens/page1.dart';
+import 'Screens/page2.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -11,8 +10,8 @@ void main() {
     home: HomeScreen(), // route for home is '/' implicitly
     routes: <String, WidgetBuilder>{
       // define the routes
-      SettingsScreen.routeName: (BuildContext context) => SettingsScreen(),
-      AccountScreen.routeName: (BuildContext context) => Page1Screen(),
+      Page2Screen.routeName: (BuildContext context) => Page2Screen(),
+      Page1Screen.routeName: (BuildContext context) => Page1Screen(),
     },
   ));
 }

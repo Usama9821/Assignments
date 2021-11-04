@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'account.dart';
-import 'settings.dart';
+import 'page1.dart';
+import 'page2.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -34,9 +34,9 @@ class HomeScreenState extends State<HomeScreen> {
 
     var myNavChildren = [
       headerChild,
-      getNavItem(Icons.settings, "Settings", SettingsScreen.routeName),
       getNavItem(Icons.home, "Home", "/"),
-      getNavItem(Icons.account_box, "Account", AccountScreen.routeName),
+      getNavItem(Icons.account_box, "1 to 5", Page1Screen.routeName),
+      getNavItem(Icons.settings, "1 to 10", Page2Screen.routeName),
       aboutChild
     ];
 
@@ -51,7 +51,7 @@ class HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Navigation Drawer Example"),
+        title: Text("Simple Math Game"),
       ),
       body: Container(
           child: Center(
