@@ -61,40 +61,49 @@ class Page1Screen extends StatelessWidget {
               //   },
               // ),
               Text("$max"),
-              Expanded(
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 125, top: 30),
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          primary: Colors.black54,
-                          onPrimary: Colors.white,
-                          minimumSize: Size(100, 50),
-                        ),
-                        child: Text(' Submit '),
-                        onPressed: () {
-                          var value1 = _controller1.text;
-                          var value2 = _controller2.text;
-                          var c1 = value1 + value2;
-                          if (c1 == max) {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (BuildContext) {
-                                  return results(
-                                    c1: c1,
-                                  );
-                                },
-                              ),
-                            );
-                          } else {}
-                        },
-                      ),
-                    )
-                  ],
+              // Expanded(
+              //   child: Row(
+              //     children: [
+              //       Padding(
+              //         padding: const EdgeInsets.only(left: 125, top: 30),
+              //         child: ElevatedButton(
+              //           style: ElevatedButton.styleFrom(
+              //             primary: Colors.black54,
+              //             onPrimary: Colors.white,
+              //             minimumSize: Size(100, 50),
+              //           ),
+              //           child: Text(' Submit '),
+              //           onPressed: () {
+              //             var value1 = _controller1.text;
+              //             var value2 = _controller2.text;
+              //             var c1 = value1 + value2;
+              //             if (c1 == max) {
+              //               Navigator.push(
+              //                 context,
+              //                 MaterialPageRoute(
+              //                   builder: (BuildContext) {
+              //                     return results(
+              //                       c1: c1,
+              //                     );
+              //                   },
+              //                 ),
+              //               );
+              //             } else {}
+              //           },
+              //         ),
+              //       )
+              //     ],
+              //   ),
+              // ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.black54,
+                  onPrimary: Colors.white,
+                  minimumSize: Size(100, 50),
                 ),
-              )
+                child: Text(' Submit '),
+                onPressed: () {},
+              ),
             ],
           ),
         ));
