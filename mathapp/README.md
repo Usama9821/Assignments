@@ -1,5 +1,4 @@
 # mathapp
-
 In this project I'm going to develop a simple math game for kids/adults
 
 ## Getting Started
@@ -14,3 +13,7 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+![Screenshot (102)](https://user-images.githubusercontent.com/70236162/140277981-d48d6fa9-ee3e-4e99-bee6-a80cc402a8e0.png)
+![Screenshot (103)](https://user-images.githubusercontent.com/70236162/140277986-8f901c48-7fdb-42a9-bfe6-a4b6bb5225df.png)
+![Screenshot (104)](https://user-images.githubusercontent.com/70236162/140277990-393a75de-857f-4d6b-b675-0b7eebc53fbc.png)
+![Screenshot (105)](https://user-images.githubusercontent.com/70236162/140277997-9101cb21-2c5d-472e-9447-32c5f8cbeb5d.png)
