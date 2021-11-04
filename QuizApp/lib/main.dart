@@ -87,7 +87,31 @@ class _QuizPageState extends State<QuizPage> {
     timer = Timer.periodic(Duration(seconds: 1), (Timer timer) {
       setState(() {
         if (start < 1) {
-          quizBrain.nextQuestion();
+          setState(() {
+            start = 10;
+          });
+          Alert(
+            context: context,
+            type: AlertType.error,
+            title: 'Failed',
+            desc: 'You\'ve Failed to answer in given time',
+            buttons: [
+              DialogButton(
+                child: Text(
+                  "Restart",
+                  style: TextStyle(color: Colors.white, fontSize: 20),
+                ),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                width: 120,
+              )
+            ],
+          ).show();
+          setState(() {
+            start = 10;
+          });
+          quizBrain.reset();
         } else {
           start--;
         }
@@ -121,11 +145,11 @@ class _QuizPageState extends State<QuizPage> {
             color: Colors.red,
           ));
         }
-        setState(() {
-          start = 10;
-        });
         quizBrain.nextQuestion();
       }
+      setState(() {
+        start = 10;
+      });
     });
   }
 
