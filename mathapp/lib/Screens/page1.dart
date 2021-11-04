@@ -1,5 +1,5 @@
 import 'dart:math';
-
+import 'results.dart';
 import 'package:flutter/material.dart';
 
 class Page1Screen extends StatelessWidget {
@@ -63,11 +63,12 @@ class Page1Screen extends StatelessWidget {
                           var value2 = _controller2.text;
                           var sum = value1 + value2;
                           if (sum == max) {
+                            Navigator.push
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
                                 builder: (BuildContext) {
-                              return result(sum: c1);
+                              return results(sum: sum);
                             },
                           ),
                           } else {}
