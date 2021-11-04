@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 import 'package:quizapp/quiz_brain.dart';
@@ -67,6 +68,33 @@ class QuizPage extends StatefulWidget {
 }
 
 class _QuizPageState extends State<QuizPage> {
+  late Timer timer;
+  int start = 10;
+
+  @override
+  void initState() {
+    super.initState();
+    startTimer();
+  }
+
+  @override
+  void dispose() {
+    timer.cancel();
+    super.dispose();
+  }
+
+  void startTimer() {
+    timer = Timer.periodic(Duration(seconds: 1), (Timer timer) {
+      setState(() {
+        if (start < 1) {
+          quizBrain.nextQuestion();
+        } else {
+          start--;
+        }
+      });
+    });
+  }
+
   List<Icon> scoreKeeper = [];
 
   void checkAnswer(bool userPickedAnswer) {
@@ -79,9 +107,7 @@ class _QuizPageState extends State<QuizPage> {
           title: 'Completed!',
           desc: 'You\'ve reached the end of the quiz.',
         ).show();
-
         quizBrain.reset();
-
         scoreKeeper = [];
       } else {
         if (userPickedAnswer == correctAnswer) {
@@ -95,6 +121,9 @@ class _QuizPageState extends State<QuizPage> {
             color: Colors.red,
           ));
         }
+        setState(() {
+          start = 10;
+        });
         quizBrain.nextQuestion();
       }
     });
@@ -106,6 +135,15 @@ class _QuizPageState extends State<QuizPage> {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
+        Center(
+          child: Text(
+            '$start',
+            style: TextStyle(
+              fontSize: 20,
+              color: Colors.white,
+            ),
+          ),
+        ),
         Expanded(
           flex: 5,
           child: Padding(
