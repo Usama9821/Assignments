@@ -52,6 +52,17 @@ class Page1Screen extends StatelessWidget {
               height: 15,
               thickness: 2,
             ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                primary: Colors.black54,
+                onPrimary: Colors.white,
+                minimumSize: Size(100, 50),
+              ),
+              child: Text(' Restart '),
+              onPressed: () {
+                //setState(() {});
+              },
+            ),
           ],
         ),
       )),
