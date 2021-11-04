@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'page1.dart';
 
 class results extends StatelessWidget {
-  final String c1;
+  var c1;
   results({required this.c1});
 
   @override

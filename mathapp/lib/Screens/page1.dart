@@ -4,9 +4,8 @@ import 'package:flutter/material.dart';
 
 class Page1Screen extends StatelessWidget {
   static const String routeName = "/page1";
-  var value1 = '';
-  var value2 = '';
-  // var _controller2 = TextEditingController();
+  var _controller1 = TextEditingController();
+  var _controller2 = TextEditingController();
   int max = Random().nextInt(9) + 1;
 
   @override
@@ -21,46 +20,46 @@ class Page1Screen extends StatelessWidget {
               Center(
                 child: Text("1 to 5 Screen"),
               ),
-              // TextFormField(
-              //   controller: _controller1,
-              //   decoration: const InputDecoration(
-              //       border: OutlineInputBorder(
-              //         borderSide: BorderSide(width: 3),
-              //         borderRadius: const BorderRadius.all(
-              //           const Radius.circular(30),
-              //         ),
-              //       ),
-              //       labelText: ''),
-              //   maxLength: 1,
-              // ),
-              TextField(
-                autofocus: false,
-                keyboardType: TextInputType.name,
-                onChanged: (text) {
-                  value1 = text;
-                },
+              TextFormField(
+                controller: _controller1,
+                decoration: const InputDecoration(
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(width: 3),
+                      borderRadius: const BorderRadius.all(
+                        const Radius.circular(30),
+                      ),
+                    ),
+                    labelText: ''),
+                maxLength: 1,
               ),
+              // TextField(
+              //   autofocus: false,
+              //   keyboardType: TextInputType.name,
+              //   onChanged: (text) {
+              //     value1 = text;
+              //   },
+              // ),
               Center(child: Text("+")),
-              // TextFormField(
-              //   controller: _controller2,
-              //   decoration: const InputDecoration(
-              //     border: OutlineInputBorder(
-              //       borderSide: BorderSide(width: 3),
-              //       borderRadius: const BorderRadius.all(
-              //         const Radius.circular(30),
-              //       ),
-              //     ),
-              //   ),
-              //   maxLength: 1,
-              //   keyboardType: TextInputType.number,
-              // ),
-              TextField(
-                autofocus: false,
-                keyboardType: TextInputType.name,
-                onChanged: (text) {
-                  value2 = text;
-                },
+              TextFormField(
+                controller: _controller2,
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide(width: 3),
+                    borderRadius: const BorderRadius.all(
+                      const Radius.circular(30),
+                    ),
+                  ),
+                ),
+                maxLength: 1,
+                keyboardType: TextInputType.number,
               ),
+              // TextField(
+              //   autofocus: false,
+              //   keyboardType: TextInputType.name,
+              //   onChanged: (text) {
+              //     value2 = text;
+              //   },
+              // ),
               Text("$max"),
               Expanded(
                 child: Row(
@@ -75,7 +74,9 @@ class Page1Screen extends StatelessWidget {
                         ),
                         child: Text(' Submit '),
                         onPressed: () {
-                          String c1 = value1 + value2;
+                          var value1 = _controller1.text;
+                          var value2 = _controller2.text;
+                          var c1 = value1 + value2;
                           if (c1 == max) {
                             Navigator.push(
                               context,
@@ -87,7 +88,6 @@ class Page1Screen extends StatelessWidget {
                                 },
                               ),
                             );
-                            //Navigator.push(context, MaterialPageRoute(builder: BuildContext){return results(sum, sum)},)
                           } else {}
                         },
                       ),
