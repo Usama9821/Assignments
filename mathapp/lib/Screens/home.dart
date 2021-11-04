@@ -36,7 +36,7 @@ class HomeScreenState extends State<HomeScreen> {
       headerChild,
       getNavItem(Icons.home, "Home", "/"),
       getNavItem(Icons.account_box, "1 to 5", Page1Screen.routeName),
-      getNavItem(Icons.settings, "1 to 10", Page2Screen.routeName),
+      getNavItem(Icons.account_box, "1 to 10", Page2Screen.routeName),
       aboutChild
     ];
 
