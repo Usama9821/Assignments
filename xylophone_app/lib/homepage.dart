@@ -108,12 +108,6 @@ class _homepageState extends State<homepage> {
                 ),
                 color: Colors.limeAccent,
                 onPressed: () {
-                  // Navigator.of(context).push(
-                  //   MaterialPageRoute(
-                  //     builder: (context) => xylo(c1: c1),
-                  //   ),
-                  // );
-
                   Navigator.push(
                     context,
                     MaterialPageRoute(
