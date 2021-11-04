@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 
 class Page1Screen extends StatelessWidget {
   static const String routeName = "/page1";
-  var _controller1 = TextEditingController();
-  var _controller2 = TextEditingController();
+  var value1 = '';
+  var value2 = '';
+  // var _controller2 = TextEditingController();
   int max = Random().nextInt(9) + 1;
 
   @override
@@ -20,30 +21,45 @@ class Page1Screen extends StatelessWidget {
               Center(
                 child: Text("1 to 5 Screen"),
               ),
-              TextFormField(
-                controller: _controller1,
-                decoration: const InputDecoration(
-                    border: OutlineInputBorder(
-                      borderSide: BorderSide(width: 3),
-                      borderRadius: const BorderRadius.all(
-                        const Radius.circular(30),
-                      ),
-                    ),
-                    labelText: ''),
-                maxLength: 1,
+              // TextFormField(
+              //   controller: _controller1,
+              //   decoration: const InputDecoration(
+              //       border: OutlineInputBorder(
+              //         borderSide: BorderSide(width: 3),
+              //         borderRadius: const BorderRadius.all(
+              //           const Radius.circular(30),
+              //         ),
+              //       ),
+              //       labelText: ''),
+              //   maxLength: 1,
+              // ),
+              TextField(
+                autofocus: false,
+                keyboardType: TextInputType.name,
+                onChanged: (text) {
+                  value1 = text;
+                },
               ),
               Center(child: Text("+")),
-              TextFormField(
-                controller: _controller2,
-                decoration: const InputDecoration(
-                    border: OutlineInputBorder(
-                        borderSide: BorderSide(width: 3),
-                        borderRadius: const BorderRadius.all(
-                          const Radius.circular(30),
-                        )),
-                    labelText: ''),
-                maxLength: 1,
-                keyboardType: TextInputType.number,
+              // TextFormField(
+              //   controller: _controller2,
+              //   decoration: const InputDecoration(
+              //     border: OutlineInputBorder(
+              //       borderSide: BorderSide(width: 3),
+              //       borderRadius: const BorderRadius.all(
+              //         const Radius.circular(30),
+              //       ),
+              //     ),
+              //   ),
+              //   maxLength: 1,
+              //   keyboardType: TextInputType.number,
+              // ),
+              TextField(
+                autofocus: false,
+                keyboardType: TextInputType.name,
+                onChanged: (text) {
+                  value2 = text;
+                },
               ),
               Text("$max"),
               Expanded(
@@ -59,15 +75,15 @@ class Page1Screen extends StatelessWidget {
                         ),
                         child: Text(' Submit '),
                         onPressed: () {
-                          var value1 = _controller1.text;
-                          var value2 = _controller2.text;
-                          var sum = value1 + value2;
-                          if (sum == max) {
+                          String c1 = value1 + value2;
+                          if (c1 == max) {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
                                 builder: (BuildContext) {
-                                  return results(sum: sum);
+                                  return results(
+                                    c1: c1,
+                                  );
                                 },
                               ),
                             );
