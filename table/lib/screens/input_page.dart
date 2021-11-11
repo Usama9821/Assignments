@@ -19,9 +19,9 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
-  int height = 1;
-  int weight = 2;
-  int age = 10;
+  var height = 1;
+  var weight = 1;
+  var age = 10;
 
   @override
   Widget build(BuildContext context) {

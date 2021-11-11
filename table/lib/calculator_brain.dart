@@ -3,19 +3,19 @@ import 'dart:math';
 class CalculatorBrain {
   CalculatorBrain({required this.height, required this.weight});
 
-  final int height;
-  final int weight;
-  double _bmi = 0;
+  var height;
+  var weight;
+  var _bmi;
   final int age = 10;
   var result;
 
   String calculateBMI() {
     //_bmi = weight / pow(height / 100, 2);
     for (int i = weight; i <= age; ++i) {
-      result = (height * weight) as double;
-      _bmi = ;
+      _bmi =
+          ("${height} * ${weight} = ${height * weight}"); //(height * weight);
     }
-    return _bmi.toStringAsFixed(1);
+    return _bmi.toString();
   }
 
   // String getResult() {

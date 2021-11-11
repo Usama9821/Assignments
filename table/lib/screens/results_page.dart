@@ -8,7 +8,7 @@ class ResultsPage extends StatelessWidget {
     required this.bmiResult,
   }); //required this.resultText; required this.interpretation,
 
-  final String bmiResult;
+  var bmiResult;
   //final String resultText;
   //final String interpretation;
 
