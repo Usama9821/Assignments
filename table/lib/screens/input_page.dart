@@ -19,9 +19,9 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
-  int height = 180;
-  int weight = 60;
-  int age = 20;
+  int height = 1;
+  int weight = 2;
+  int age = 10;
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +39,7 @@ class _InputPageState extends State<InputPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    'HEIGHT',
+                    'Table Number',
                     style: kLabelTextStyle,
                   ),
                   Row(
@@ -51,10 +51,6 @@ class _InputPageState extends State<InputPage> {
                         height.toString(),
                         style: kNumberTextStyle,
                       ),
-                      Text(
-                        'cm',
-                        style: kLabelTextStyle,
-                      )
                     ],
                   ),
                   SliderTheme(
@@ -70,8 +66,8 @@ class _InputPageState extends State<InputPage> {
                     ),
                     child: Slider(
                       value: height.toDouble(),
-                      min: 120.0,
-                      max: 220.0,
+                      min: 1.0,
+                      max: 100.0,
                       onChanged: (double newValue) {
                         setState(() {
                           height = newValue.round();
@@ -94,7 +90,7 @@ class _InputPageState extends State<InputPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Text(
-                          'WEIGHT',
+                          'Starting Limit',
                           style: kLabelTextStyle,
                         ),
                         Text(
@@ -136,7 +132,7 @@ class _InputPageState extends State<InputPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Text(
-                          'AGE',
+                          'Ending Limit',
                           style: kLabelTextStyle,
                         ),
                         Text(

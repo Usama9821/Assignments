@@ -5,11 +5,16 @@ class CalculatorBrain {
 
   final int height;
   final int weight;
-
   double _bmi = 0;
+  final int age = 10;
+  var calc;
 
   String calculateBMI() {
-    _bmi = weight / pow(height / 100, 2);
+    //_bmi = weight / pow(height / 100, 2);
+    for (int i = weight; i <= age; ++i) {
+      calc = (height * weight) as double;
+      _bmi = ("$height * $weight = $calc") as double;
+    }
     return _bmi.toStringAsFixed(1);
   }
 
