@@ -4,14 +4,13 @@ import 'package:table/components/reusable_card.dart';
 import 'package:table/components/bottom_button.dart';
 
 class ResultsPage extends StatelessWidget {
-  ResultsPage(
-      {required this.interpretation,
-      required this.bmiResult,
-      required this.resultText});
+  ResultsPage({
+    required this.bmiResult,
+  }); //required this.resultText; required this.interpretation,
 
   final String bmiResult;
-  final String resultText;
-  final String interpretation;
+  //final String resultText;
+  //final String interpretation;
 
   @override
   Widget build(BuildContext context) {
@@ -41,19 +40,19 @@ class ResultsPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Text(
-                    resultText.toUpperCase(),
-                    style: kResultTextStyle,
-                  ),
+                  // Text(
+                  //   resultText.toUpperCase(),
+                  //   style: kResultTextStyle,
+                  // ),
                   Text(
                     bmiResult,
                     style: kBMITextStyle,
                   ),
-                  Text(
-                    interpretation,
-                    textAlign: TextAlign.center,
-                    style: kBodyTextStyle,
-                  ),
+                  // Text(
+                  //   interpretation,
+                  //   textAlign: TextAlign.center,
+                  //   style: kBodyTextStyle,
+                  // ),
                 ],
               ),
               onPress: () {},
