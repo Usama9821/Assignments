@@ -84,7 +84,7 @@ class _QuizPageState extends State<QuizPage> {
   }
 
   void startTimer() {
-    timer = Timer.periodic(Duration(seconds: 5), (Timer timer) {
+    timer = Timer.periodic(Duration(seconds: 1), (Timer timer) {
       setState(() {
         if (start < 1) {
           setState(() {
