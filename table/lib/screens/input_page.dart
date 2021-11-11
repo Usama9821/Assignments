@@ -8,11 +8,6 @@ import 'package:table/components/bottom_button.dart';
 import 'package:table/components/round_icon_button.dart';
 import 'package:table/calculator_brain.dart';
 
-enum Gender {
-  male,
-  female,
-}
-
 class InputPage extends StatefulWidget {
   @override
   _InputPageState createState() => _InputPageState();
