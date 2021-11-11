@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'screens/input_page.dart';
 
-void main() => runApp(BMICalculator());
+void main() => runApp(Tablecalc());
 
-class BMICalculator extends StatelessWidget {
+class Tablecalc extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

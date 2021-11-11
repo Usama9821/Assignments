@@ -19,7 +19,6 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
-  late Gender selectedGender;
   int height = 180;
   int weight = 60;
   int age = 20;
@@ -33,43 +32,6 @@ class _InputPageState extends State<InputPage> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          Expanded(
-              child: Row(
-            children: <Widget>[
-              Expanded(
-                child: ReusableCard(
-                  onPress: () {
-                    setState(() {
-                      selectedGender = Gender.male;
-                    });
-                  },
-                  colour: selectedGender == Gender.male
-                      ? kActiveCardColour
-                      : kInactiveCardColour,
-                  cardChild: IconContent(
-                    icon: FontAwesomeIcons.mars,
-                    label: 'MALE',
-                  ),
-                ),
-              ),
-              Expanded(
-                child: ReusableCard(
-                  onPress: () {
-                    setState(() {
-                      selectedGender = Gender.female;
-                    });
-                  },
-                  colour: selectedGender == Gender.female
-                      ? kActiveCardColour
-                      : kInactiveCardColour,
-                  cardChild: IconContent(
-                    icon: FontAwesomeIcons.venus,
-                    label: 'FEMALE',
-                  ),
-                ),
-              ),
-            ],
-          )),
           Expanded(
             child: ReusableCard(
               colour: kActiveCardColour,
@@ -119,6 +81,7 @@ class _InputPageState extends State<InputPage> {
                   ),
                 ],
               ),
+              onPress: () {},
             ),
           ),
           Expanded(
@@ -163,6 +126,7 @@ class _InputPageState extends State<InputPage> {
                         ),
                       ],
                     ),
+                    onPress: () {},
                   ),
                 ),
                 Expanded(
@@ -206,6 +170,7 @@ class _InputPageState extends State<InputPage> {
                         )
                       ],
                     ),
+                    onPress: () {},
                   ),
                 ),
               ],
@@ -216,7 +181,6 @@ class _InputPageState extends State<InputPage> {
             onTap: () {
               CalculatorBrain calc =
                   CalculatorBrain(height: height, weight: weight);
-
               Navigator.push(
                 context,
                 MaterialPageRoute(
