@@ -27,7 +27,7 @@ class _InputPageState extends State<InputPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('BMI CALCULATOR'),
+        title: Text('Table Generator'),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,

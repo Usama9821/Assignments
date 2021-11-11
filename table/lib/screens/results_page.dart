@@ -9,14 +9,12 @@ class ResultsPage extends StatelessWidget {
   }); //required this.resultText; required this.interpretation,
 
   var bmiResult;
-  //final String resultText;
-  //final String interpretation;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('BMI CALCULATOR'),
+        title: Text('Table Generator'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -27,7 +25,7 @@ class ResultsPage extends StatelessWidget {
               padding: EdgeInsets.all(15.0),
               alignment: Alignment.bottomLeft,
               child: Text(
-                'Your Result',
+                'Generated Table',
                 style: kTitleTextStyle,
               ),
             ),
@@ -40,6 +38,9 @@ class ResultsPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
+                  // ListTile(
+                  //   title: Text(""),
+                  // ),
                   // Text(
                   //   resultText.toUpperCase(),
                   //   style: kResultTextStyle,

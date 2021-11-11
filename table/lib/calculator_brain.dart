@@ -10,10 +10,8 @@ class CalculatorBrain {
   var result;
 
   String calculateBMI() {
-    //_bmi = weight / pow(height / 100, 2);
     for (int i = weight; i <= age; ++i) {
-      _bmi =
-          ("${height} * ${weight} = ${height * weight}"); //(height * weight);
+      _bmi = ("${height} * ${weight} = ${height * weight}");
     }
     return _bmi.toString();
   }
