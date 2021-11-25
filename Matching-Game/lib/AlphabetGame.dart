@@ -1,33 +1,33 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
-import 'AlphabetGame.dart';
+import 'NumberGame.dart';
 
-class NumberGame extends StatefulWidget {
+class AlphabetGame extends StatefulWidget {
   @override
-  _NumberGameState createState() => _NumberGameState();
+  _AlphabetGameState createState() => _AlphabetGameState();
 }
 
-class _NumberGameState extends State<NumberGame> {
+class _AlphabetGameState extends State<AlphabetGame> {
   List<ItemModel> itemsdata = [
     ItemModel(
-      name: 'one',
-      value: 'one',
-      imgurl: "assets/images/one.png",
+      name: 'a',
+      value: 'a',
+      imgurl: "assets/images/alpha1.png",
     ),
     ItemModel(
-      name: 'two',
-      value: 'two',
-      imgurl: "assets/images/two.png",
+      name: 'b',
+      value: 'b',
+      imgurl: "assets/images/alpha2.png",
     ),
     ItemModel(
-      name: 'three',
-      value: 'three',
-      imgurl: "assets/images/three.png",
+      name: 'c',
+      value: 'c',
+      imgurl: "assets/images/alpha3.png",
     ),
     ItemModel(
-      name: 'four',
-      value: 'four',
-      imgurl: "assets/images/four.png",
+      name: 'd',
+      value: 'd',
+      imgurl: "assets/images/alpha4.png",
     )
   ];
   List<ItemModel> items;
@@ -59,36 +59,37 @@ class _NumberGameState extends State<NumberGame> {
         child: Container(
           color: Colors.black12,
           child: ListView(
-              // Important: Remove any padding from the ListView.
-              padding: EdgeInsets.zero,
-              children: [
-                const DrawerHeader(
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                    image: AssetImage("Images/images.jpg"),
-                    fit: BoxFit.cover,
-                  )),
-                  child: null,
-                ),
-                ListTile(
-                  title: const Text('Match Numbers'),
-                  onTap: () {
-                    Navigator.of(context).pushReplacement(
-                        MaterialPageRoute(builder: (context) => NumberGame()));
-                    // Update the state of the app.
-                    // ...
-                  },
-                ),
-                ListTile(
-                  title: const Text('Match Alphabets'),
-                  onTap: () {
-                    Navigator.of(context).pushReplacement(MaterialPageRoute(
-                        builder: (context) => AlphabetGame()));
-                    // Update the state of the app.
-                    // ...
-                  },
-                ),
-              ]),
+            // Important: Remove any padding from the ListView.
+            padding: EdgeInsets.zero,
+            children: [
+              const DrawerHeader(
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                  image: AssetImage("Images/images.jpg"),
+                  fit: BoxFit.cover,
+                )),
+                child: null,
+              ),
+              ListTile(
+                title: const Text('Match Numbers'),
+                onTap: () {
+                  Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(builder: (context) => NumberGame()));
+                  // Update the state of the app.
+                  // ...
+                },
+              ),
+              ListTile(
+                title: const Text('Match Alphabets'),
+                onTap: () {
+                  Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(builder: (context) => AlphabetGame()));
+                  // Update the state of the app.
+                  // ...
+                },
+              ),
+            ],
+          ),
         ),
       ),
       appBar: AppBar(
@@ -96,7 +97,7 @@ class _NumberGameState extends State<NumberGame> {
         elevation: 0,
         centerTitle: true,
         title: Text(
-          "Number match Game",
+          "Alphabet match Game",
         ),
       ),
       body: SingleChildScrollView(
@@ -208,13 +209,13 @@ class _NumberGameState extends State<NumberGame> {
               ),
             if (gameOver)
               Center(
-                  child: Image.network(
-                      "https://image.freepik.com/free-vector/game-pixel-art-retro-game-style_163786-44.jpg")),
+                child: Text('You Won'),
+              ),
             if (gameOver)
               Container(
                 width: 300,
                 child: RaisedButton(
-                  color: Colors.red,
+                  color: Colors.redAccent,
                   child: Text("Restart Game"),
                   onPressed: () {
                     initGame();
