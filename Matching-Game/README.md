@@ -1,4 +1,3 @@
-# Episode 183 - Flutter Drag and Drop
 
 Create a drag-and-drop game for kids with Flutter.
 
