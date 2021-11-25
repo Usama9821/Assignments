@@ -31,13 +31,6 @@ class Page2Screen extends StatelessWidget {
                     labelText: ''),
                 maxLength: 1,
               ),
-              // TextField(
-              //   autofocus: false,
-              //   keyboardType: TextInputType.name,
-              //   onChanged: (text) {
-              //     value1 = text;
-              //   },
-              // ),
               Center(child: Text("+")),
               TextFormField(
                 controller: _controller2,
@@ -52,48 +45,7 @@ class Page2Screen extends StatelessWidget {
                 maxLength: 1,
                 keyboardType: TextInputType.number,
               ),
-              // TextField(
-              //   autofocus: false,
-              //   keyboardType: TextInputType.name,
-              //   onChanged: (text) {
-              //     value2 = text;
-              //   },
-              // ),
               Text("$max"),
-              // Expanded(
-              //   child: Row(
-              //     children: [
-              //       Padding(
-              //         padding: const EdgeInsets.only(left: 125, top: 30),
-              //         child: ElevatedButton(
-              //           style: ElevatedButton.styleFrom(
-              //             primary: Colors.black54,
-              //             onPrimary: Colors.white,
-              //             minimumSize: Size(100, 50),
-              //           ),
-              //           child: Text(' Submit '),
-              //           onPressed: () {
-              //             var value1 = _controller1.text;
-              //             var value2 = _controller2.text;
-              //             var c1 = value1 + value2;
-              //             if (c1 == max) {
-              //               Navigator.push(
-              //                 context,
-              //                 MaterialPageRoute(
-              //                   builder: (BuildContext) {
-              //                     return results(
-              //                       c1: c1,
-              //                     );
-              //                   },
-              //                 ),
-              //               );
-              //             } else {}
-              //           },
-              //         ),
-              //       )
-              //     ],
-              //   ),
-              // ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   primary: Colors.black54,

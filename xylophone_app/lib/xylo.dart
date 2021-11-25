@@ -1,64 +1,134 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
-import 'homepage.dart';
+import 'package:audioplayers/src/audio_cache.dart';
 
-class xylo extends StatelessWidget {
-  void playnote(int num) {
-    final player = new AudioCache();
-    //player.load('not$num.wav');
-    player.play('not$num.wav');
+class temporary {
+  Color X(String y) {
+    if (y == '1') {
+      return (Colors.red);
+    }
+  }
+}
+
+void fun() {}
+
+class colorPlaying extends StatelessWidget {
+  String x1;
+  String x2;
+  String x3;
+  String x4;
+  String x5;
+  String x6;
+
+  colorPlaying(
+      {required Key key,
+      required this.x1,
+      required this.x2,
+      required this.x3,
+      required this.x4,
+      required this.x5,
+      required this.x6})
+      : super(key: key);
+
+  Color fun(String q) {
+    if (q == '1') {
+      return (Colors.red);
+    } else if (q == '2') {
+      return (Colors.orange);
+    } else if (q == '3') {
+      return (Colors.grey);
+    } else if (q == '4') {
+      return (Colors.purple);
+    } else if (q == '5') {
+      return (Colors.yellow);
+    } else if (q == '6') {
+      return (Colors.black);
+    }
   }
 
-  Expanded playbutton(Color color, int number) {
-    return Expanded(
-      child: new FlatButton(
-        child: Text(
-          '',
-          style: TextStyle(fontSize: 0, color: Colors.black),
-        ),
-        color: color,
-        onPressed: () {
-          playnote(number);
-        },
-      ),
-    );
-  }
-
-  final String c1;
-  xylo({required this.c1});
-  @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.black87,
-          title: new Text(
-            "Xylophone",
-          ),
-          elevation: 4.0,
-          centerTitle: true,
+          title: Text('Play'),
+          // title: Text(x1),
         ),
         body: SafeArea(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              FlatButton(
-                child: Text(
-                  c1,
-                  style: TextStyle(fontSize: 0, color: Colors.black),
+              Expanded(
+                child: FlatButton(
+                  minWidth: 1500,
+                  // color: Colors.red,
+                  color: fun(x6),
+                  onPressed: () {
+                    final play = AudioCache();
+                    play.play('1.wav');
+                  },
+                  child: Text(''),
                 ),
-                color: Colors.black54,
-                onPressed: () {},
               ),
-              //For some reason TextButton not working here but flatbutton works perfect.
-              playbutton(Colors.red, 1),
-              playbutton(Colors.greenAccent, 2),
-              playbutton(Colors.blue, 3),
-              playbutton(Colors.grey, 4),
-              playbutton(Colors.yellow, 5),
-              playbutton(Colors.pinkAccent, 6),
-              playbutton(Colors.deepPurple, 7),
+              Expanded(
+                child: FlatButton(
+                  minWidth: 1500,
+                  // color: Colors.red,
+                  color: fun(x1),
+                  onPressed: () {
+                    final play = AudioCache();
+                    play.play('1.wav');
+                  },
+                  child: Text(''),
+                ),
+              ),
+              Expanded(
+                child: FlatButton(
+                  minWidth: 1500,
+                  // color: Colors.orange,
+                  color: fun(x2),
+                  onPressed: () {
+                    final play = AudioCache();
+                    play.play('2.wav');
+                    // play.play('1');
+                  },
+                  child: Text(''),
+                ),
+              ),
+              Expanded(
+                child: FlatButton(
+                  minWidth: 1500,
+                  // color: Colors.purple,
+                  color: fun(x3),
+                  onPressed: () {
+                    final play = AudioCache();
+                    play.play('3.wav');
+                  },
+                  child: Text(''),
+                ),
+              ),
+              Expanded(
+                child: FlatButton(
+                  minWidth: 1500,
+                  // color: Colors.green,
+                  color: fun(x4),
+                  onPressed: () {
+                    final play = AudioCache();
+                    play.play('4.wav');
+                  },
+                  child: Text(''),
+                ),
+              ),
+              Expanded(
+                child: FlatButton(
+                  minWidth: 1500,
+                  // color: Colors.grey,
+                  color: fun(x5),
+                  onPressed: () {
+                    final play = AudioCache();
+                    play.play('5.wav');
+                  },
+                  child: Text(''),
+                ),
+              ),
             ],
           ),
         ),

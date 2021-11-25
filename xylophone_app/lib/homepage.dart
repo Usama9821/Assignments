@@ -100,25 +100,25 @@ class _homepageState extends State<homepage> {
                 child: Text(''),
               ),
             ),
-            Center(
-              child: FlatButton(
-                child: Text(
-                  'Start',
-                  style: TextStyle(fontSize: 0, color: Colors.black),
-                ),
-                color: Colors.limeAccent,
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (BuildContext) {
-                        return xylo(c1: c1);
-                      },
-                    ),
-                  );
-                },
-              ),
-            ),
+            // Center(
+            //   child: FlatButton(
+            //     child: Text(
+            //       'Start',
+            //       style: TextStyle(fontSize: 0, color: Colors.black),
+            //     ),
+            //     color: Colors.limeAccent,
+            //     onPressed: () {
+            //       Navigator.push(
+            //         context,
+            //         MaterialPageRoute(
+            //           builder: (BuildContext) {
+            //             return xylo(c1: c1);
+            //           },
+            //         ),
+            //       );
+            //     },
+            //   ),
+            // ),
           ],
         ),
       ),

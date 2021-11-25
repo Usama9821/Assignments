@@ -4,11 +4,21 @@ import 'package:table/components/reusable_card.dart';
 import 'package:table/components/bottom_button.dart';
 
 class ResultsPage extends StatelessWidget {
+  List bmiResult = [];
+  static int y = InputPage.starting_limit;
+  String x;
+  int e = 0;
   ResultsPage({
     required this.bmiResult,
   }); //required this.resultText; required this.interpretation,
-
-  var bmiResult;
+  List result() {
+    for (y = InputPage.starting_limit; y <= InputPage.ending_limit; y++) {
+      x = ("${InputPage.Table_number}  * $y = ${InputPage.Table_number * y} \n")
+          as String;
+      bmiResult.add(x);
+    }
+    return bmiResult;
+  }
 
   @override
   Widget build(BuildContext context) {
