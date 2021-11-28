@@ -29,6 +29,11 @@ class _NumberGameState extends State<NumberGame> {
       name: 'four',
       value: 'four',
       imgurl: "assets/images/four.png",
+    ),
+    ItemModel(
+      name: 'five',
+      value: 'five',
+      imgurl: "assets/images/five.png",
     )
   ];
   List<ItemModel> items;
@@ -218,8 +223,9 @@ class _NumberGameState extends State<NumberGame> {
               ),
             if (gameOver)
               Center(
-                  child: Image.network(
-                      "https://image.freepik.com/free-vector/game-pixel-art-retro-game-style_163786-44.jpg")),
+                  //child: Image.network(
+                  //  "https://image.freepik.com/free-vector/game-pixel-art-retro-game-style_163786-44.jpg")
+                  ),
             if (gameOver)
               Container(
                 width: 300,
@@ -232,6 +238,17 @@ class _NumberGameState extends State<NumberGame> {
                   },
                 ),
               ),
+            Container(
+              width: 300,
+              child: RaisedButton(
+                color: Colors.red,
+                child: Text("Home"),
+                onPressed: () {
+                  Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(builder: (context) => Homepage()));
+                },
+              ),
+            ),
           ],
         ),
       ),

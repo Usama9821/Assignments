@@ -68,12 +68,44 @@ class Homepage extends StatelessWidget {
             children: [
               Center(
                 child: Text(
-                  'Home Page',
+                  'Select your Game mode',
                   style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.w800,
                     letterSpacing: 0.5,
                     fontSize: 35,
+                  ),
+                ),
+              ),
+              const SizedBox(
+                width: 200.0,
+                height: 50.0,
+              ),
+              Center(
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).pushReplacement(
+                        MaterialPageRoute(builder: (context) => NumberGame()));
+                  },
+                  child: const Text(
+                    'Number Game',
+                    style: TextStyle(fontSize: 28),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                width: 200.0,
+                height: 10.0,
+              ),
+              Center(
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(
+                        builder: (context) => AlphabetGame()));
+                  },
+                  child: const Text(
+                    'Alphabet Game',
+                    style: TextStyle(fontSize: 28),
                   ),
                 ),
               ),
