@@ -2,6 +2,11 @@
 
 This is the second attempt to create app with firebase
 
+Sample: 
+![working firebase code](https://user-images.githubusercontent.com/70236162/144302893-1871add0-66de-4208-9b8a-81f05adf10c8.png)
+
+
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
