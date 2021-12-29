@@ -8,15 +8,15 @@ final controller = TextEditingController();
 
 class passgenerator extends StatefulWidget {
   @override
-  State<passgenerator> createState() => _passgeneratorState();
-}
-
-class _passgeneratorState extends State<passgenerator> {
-  @override
   void dispose() {
     controller.dispose();
   }
 
+  @override
+  State<passgenerator> createState() => _passgeneratorState();
+}
+
+class _passgeneratorState extends State<passgenerator> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
