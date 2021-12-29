@@ -13,7 +13,9 @@ class _passgeneratorState extends State<passgenerator> {
   Widget build(BuildContext context) {
     return Container(
       child: Column(
-        children: <Widget>[],
+        children: const <Widget>[
+          Text('Welcome to the Password Generator app'),
+        ],
       ),
     );
   }
