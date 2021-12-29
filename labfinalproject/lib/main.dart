@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'passgen.dart';
+import 'homepage.dart';
 
 void main() {
-  runApp(const passApp());
+  runApp(passApp());
 }
 
 class passApp extends StatelessWidget {
@@ -16,37 +16,7 @@ class passApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Scaffold(
-        drawer: Drawer(
-          child: ListView(
-            padding: EdgeInsets.zero,
-            children: [
-              const DrawerHeader(
-                decoration: BoxDecoration(
-                  color: Colors.blue,
-                ),
-                child: Text('Menu'),
-              ),
-              ListTile(
-                title: const Text('SIMPLE'),
-                onTap: () {
-                  Navigator.pop(context);
-                },
-              ),
-              ListTile(
-                title: const Text('HARD'),
-                onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return passgenerator();
-                  }));
-                },
-              ),
-            ],
-          ),
-        ),
-        appBar: AppBar(),
-        body: passgenerator(),
-      ),
+      home: homepage(),
     );
   }
 }
