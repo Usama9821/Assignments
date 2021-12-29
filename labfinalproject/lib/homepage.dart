@@ -24,8 +24,7 @@ class homepage extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) => const passgenerator()),
+                  MaterialPageRoute(builder: (context) => passgenerator()),
                 );
               },
             ),

@@ -4,7 +4,8 @@ import 'package:labfinalproject/homepage.dart';
 import 'package:labfinalproject/hard.dart';
 
 class passgenerator extends StatelessWidget {
-  const passgenerator({Key? key}) : super(key: key);
+  passgenerator({Key? key}) : super(key: key);
+
   final controller = TextEditingController();
 
   @override
@@ -41,12 +42,15 @@ class passgenerator extends StatelessWidget {
         ),
       ),
       appBar: AppBar(
-        title: const Text('Simple Password Generator'),
+        title: Text('Simple Password Generator'),
         centerTitle: true,
       ),
       body: Container(
+        padding: EdgeInsets.all(32),
         child: Column(
-          children: [Text('Homepage')],
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [],
         ),
       ),
     );
