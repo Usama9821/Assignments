@@ -20,7 +20,7 @@ class hardpage extends StatelessWidget {
               child: Text('Menu'),
             ),
             ListTile(
-              title: Text('HOME'),
+              title: Text('Simple'),
               onTap: () {
                 Navigator.push(
                   context,
@@ -29,7 +29,7 @@ class hardpage extends StatelessWidget {
               },
             ),
             ListTile(
-              title: Text('Homepage'),
+              title: Text('HOME'),
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return homepage();
