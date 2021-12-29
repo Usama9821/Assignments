@@ -40,7 +40,10 @@ class homepage extends StatelessWidget {
           ],
         ),
       ),
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text('Homepage | Password Generator'),
+        centerTitle: true,
+      ),
       body: Container(
         child: Column(
           children: [Text('Homepage')],
