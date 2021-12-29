@@ -18,10 +18,29 @@ class passApp extends StatelessWidget {
       ),
       home: Scaffold(
         drawer: Drawer(
-          child: Column(
+          child: ListView(
+            padding: EdgeInsets.zero,
             children: [
-              Text('Simple'),
-              Text('Hard'),
+              const DrawerHeader(
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                ),
+                child: Text('Menu'),
+              ),
+              ListTile(
+                title: const Text('SIMPLE'),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                title: const Text('HARD'),
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return passgenerator();
+                  }));
+                },
+              ),
             ],
           ),
         ),
