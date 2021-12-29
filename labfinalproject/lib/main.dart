@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'passgen.dart';
 
 void main() {
   runApp(const passApp());
@@ -14,6 +15,18 @@ class passApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
+      ),
+      home: Scaffold(
+        drawer: Drawer(
+          child: Column(
+            children: [
+              Text('Simple'),
+              Text('Hard'),
+            ],
+          ),
+        ),
+        appBar: AppBar(),
+        body: passgenerator(),
       ),
     );
   }
