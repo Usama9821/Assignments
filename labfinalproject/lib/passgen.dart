@@ -97,7 +97,11 @@ buildButton() {
 
 String generatePassword(
     {bool hasletters = true, bool hasnumbers = true, bool hassymbols = true}) {
-  final length = 8;
+  final numlength = 8;
+  final uppercaselength = 2;
+  final lowercaselength = 2;
+  final symbolscaselength = 2;
+
   final lowercaseleters = 'abcdefghijklmnopqrstuvwxyz';
   final uppercaseleters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   final numbers = '0123456789';
@@ -108,7 +112,7 @@ String generatePassword(
   if (hasnumbers) chars += '$numbers';
   if (hassymbols) chars += '$symbols';
 
-  return List.generate(length, (index) {
+  return List.generate(numlength, (index) {
     final indexRandom = Random.secure().nextInt(chars.length);
     return chars[indexRandom];
   }).join('');
