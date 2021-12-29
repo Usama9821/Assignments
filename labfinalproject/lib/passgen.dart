@@ -97,7 +97,7 @@ buildButton() {
 
 String generatePassword(
     {bool hasletters = true, bool hasnumbers = true, bool hassymbols = true}) {
-  final numlength = 8;
+  final numlength = 12;
   final uppercaselength = 2;
   final lowercaselength = 2;
   final symbolscaselength = 2;
