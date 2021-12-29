@@ -109,7 +109,7 @@ String generatePassword(
   if (hassymbols) chars += '$symbols';
 
   return List.generate(length, (index) {
-    final indexRandom = Random().nextInt(chars.length);
+    final indexRandom = Random.secure().nextInt(chars.length);
     return chars[indexRandom];
   }).join('');
 }
