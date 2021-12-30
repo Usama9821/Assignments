@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:labfinalproject/homepage.dart';
 import 'package:labfinalproject/hard.dart';
 
@@ -70,6 +71,29 @@ class _passgeneratorState extends State<passgenerator> {
             const SizedBox(height: 12),
             TextField(
               controller: controller,
+              readOnly: true,
+              enableInteractiveSelection: false,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                suffixIcon: IconButton(
+                  icon: Icon(Icons.copy),
+                  onPressed: () {
+                    final data = ClipboardData(text: controller.text);
+                    Clipboard.setData(data);
+
+                    final snackBar = SnackBar(
+                        content: Text(
+                          'Password Coppied',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        backgroundColor: Colors.blue);
+
+                    ScaffoldMessenger.of(context)
+                      ..removeCurrentSnackBar()
+                      ..showSnackBar(snackBar);
+                  },
+                ),
+              ),
             ),
             const SizedBox(height: 12),
             buildButton(),

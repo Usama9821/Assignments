@@ -45,7 +45,33 @@ class homepage extends StatelessWidget {
       ),
       body: Container(
         child: Column(
-          children: [Text('Homepage')],
+          // crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Center(
+              child: ElevatedButton(
+                child: Text('SIMPLE'),
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return passgenerator();
+                  }));
+                },
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Center(
+              child: ElevatedButton(
+                child: Text('HARD'),
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return hardpage();
+                  }));
+                },
+              ),
+            ),
+          ],
         ),
       ),
     );
