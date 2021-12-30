@@ -4,7 +4,9 @@ import 'package:flutter/services.dart';
 import 'package:labfinalproject/homepage.dart';
 import 'package:labfinalproject/passgen.dart';
 import 'dart:math';
+import 'package:firebase_database/firebase_database.dart';
 
+final FirebaseDatabase database = FirebaseDatabase.instance;
 final controller = TextEditingController();
 var sliderval = 2;
 
@@ -75,7 +77,7 @@ class _hardpageState extends State<hardpage> {
                       sliderval.toString(),
                       style: TextStyle(
                           color: Colors.redAccent,
-                          fontSize: 24,
+                          fontSize: 28,
                           fontWeight: FontWeight.bold),
                     ),
                   ],
@@ -85,7 +87,7 @@ class _hardpageState extends State<hardpage> {
                   min: 2.0,
                   max: 32.0,
                   activeColor: Colors.black,
-                  inactiveColor: Colors.red,
+                  inactiveColor: Colors.blue,
                   onChanged: (double newValue) {
                     setState(() {
                       sliderval = newValue.round();
@@ -135,11 +137,17 @@ buildButton() {
     (states) =>
         states.contains(MaterialState.pressed) ? Colors.blue : Colors.black,
   );
+
   return ElevatedButton(
     style: ButtonStyle(backgroundColor: backgroundColor),
     onPressed: () {
       final password = generatePassword();
       controller.text = password;
+      void passsaver() {
+        database.reference().child("Saved_Passwords").set(
+          {"Password": password},
+        );
+      }
     },
     child: Text('Generate Password'),
   );

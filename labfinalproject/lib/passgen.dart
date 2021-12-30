@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:labfinalproject/homepage.dart';
 import 'package:labfinalproject/hard.dart';
+import 'package:firebase_database/firebase_database.dart';
 
+final FirebaseDatabase database = FirebaseDatabase.instance;
 final controller = TextEditingController();
 
 class passgenerator extends StatefulWidget {

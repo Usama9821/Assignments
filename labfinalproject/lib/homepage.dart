@@ -2,6 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'passgen.dart';
 import 'hard.dart';
+import 'package:firebase_database/firebase_database.dart';
+
+final FirebaseDatabase database = FirebaseDatabase.instance;
 
 class homepage extends StatelessWidget {
   const homepage({Key? key}) : super(key: key);
