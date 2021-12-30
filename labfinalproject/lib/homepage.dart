@@ -50,7 +50,9 @@ class homepage extends StatelessWidget {
           children: [
             Center(
               child: ElevatedButton(
-                child: Text('SIMPLE'),
+                child: Text(
+                  'SIMPLE',
+                ),
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
                     return passgenerator();
