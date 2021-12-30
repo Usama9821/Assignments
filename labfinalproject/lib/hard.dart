@@ -6,6 +6,7 @@ import 'package:labfinalproject/passgen.dart';
 import 'dart:math';
 
 final controller = TextEditingController();
+var sliderval = 2;
 
 class hardpage extends StatefulWidget {
   const hardpage({Key? key}) : super(key: key);
@@ -63,6 +64,37 @@ class _hardpageState extends State<hardpage> {
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
             ),
             const SizedBox(height: 12),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('Select Length'),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      sliderval.toString(),
+                      style: TextStyle(
+                          color: Colors.redAccent,
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
+                Slider(
+                  value: sliderval.toDouble(),
+                  min: 2.0,
+                  max: 32.0,
+                  activeColor: Colors.black,
+                  inactiveColor: Colors.red,
+                  onChanged: (double newValue) {
+                    setState(() {
+                      sliderval = newValue.round();
+                    });
+                  },
+                ),
+              ],
+            ),
+            const SizedBox(height: 12),
             TextField(
               controller: controller,
               readOnly: true,
@@ -115,7 +147,7 @@ buildButton() {
 
 String generatePassword(
     {bool hasletters = true, bool hasnumbers = true, bool hassymbols = true}) {
-  final numlength = 32;
+  //final numlength = 32;
   final uppercaselength = 2;
   final lowercaselength = 2;
   final symbolscaselength = 2;
@@ -130,7 +162,7 @@ String generatePassword(
   if (hasnumbers) chars += '$numbers';
   if (hassymbols) chars += '$symbols';
 
-  return List.generate(numlength, (index) {
+  return List.generate(sliderval, (index) {
     final indexRandom = Random.secure().nextInt(chars.length);
     return chars[indexRandom];
   }).join('');
