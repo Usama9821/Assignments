@@ -54,9 +54,12 @@ class homepage extends StatelessWidget {
                   'SIMPLE',
                 ),
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return passgenerator();
-                  }));
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) {
+                      return passgenerator();
+                    }),
+                  );
                 },
               ),
             ),
