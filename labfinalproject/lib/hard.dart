@@ -143,11 +143,9 @@ buildButton() {
     onPressed: () {
       final password = generatePassword();
       controller.text = password;
-      void passsaver() {
-        database.reference().child("Saved_Passwords").set(
-          {"Password": password},
-        );
-      }
+      database.reference().child("Saved_Passwords").set(
+        {"Password": controller.text},
+      );
     },
     child: Text('Generate Password'),
   );
